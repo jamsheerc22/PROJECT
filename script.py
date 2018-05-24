@@ -20,6 +20,11 @@ def player_input():
         return ('X','O')
     else:
         return ('O','X')
-player1,player2 = player_input()    
+player1,player2 = player_input()
+
+#this function moves the position in the board
+
+def place_marker(board,marker,position):
+    board[position]=marker
     
     
