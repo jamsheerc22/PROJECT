@@ -53,4 +53,13 @@ def choose_first():
 def space_check(board,position):
     '''This is a function which checks for blank box in the game'''
     return board[position] == ' '
+
+def full_board_check(board):
+    
+    #this function is for full board check of blank box
+    
+    for i in range(1,10):
+        if space_check(board,i):
+            return False
+    return True 
     
