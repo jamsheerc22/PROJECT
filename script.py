@@ -34,5 +34,18 @@ def win_check(board,mark):
     return ((board[1]==board[2]==board[3]==mark) or (board[4]==board[5]==board[6]==mark) or (board[7]==board[8]==board[9]==mark) or
     (board[1]==board[4]==board[7]==mark) or (board[2]==board[5]==board[8]==mark) or (board[3]==board[6]==board[9]==mark) or
     (board[1]==board[5]==board[9]==mark) or (board[7]==board[5]==board[3]==mark) )
+
+#this function randomly chooses the first turn, either player1 or player2
+
+import random
+
+def choose_first():
+    '''this function randomly chooses the first turn, either player1 or player2'''
+    flip = random.randint(0,1)
+    
+    if flip == 0:
+        return 'player1'
+    else:
+        return 'player2'
     
     
