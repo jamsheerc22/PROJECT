@@ -48,4 +48,9 @@ def choose_first():
     else:
         return 'player2'
     
+    #function which checks for blank box 
+    
+def space_check(board,position):
+    '''This is a function which checks for blank box in the game'''
+    return board[position] == ' '
     
