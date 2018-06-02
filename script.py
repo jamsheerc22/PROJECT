@@ -73,4 +73,10 @@ def player_choice(board):
         position = int(input('choose a position (1,9): '))
         
     return position
+
+#Below function asks the player to play again
+
+def replay():
+    choice = input("Do u want to play?yes or no")
+    return choice == 'yes'
     
