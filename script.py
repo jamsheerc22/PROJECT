@@ -82,4 +82,51 @@ def player_choice(board):
 def replay():
     choice = input("Do u want to play?yes or no")
     return choice == 'yes'
+
+  #last set of code using above function
     
+print('Welcome to tic tactoe game')
+
+#using while loop to continue with the game
+
+while True:
+    
+    #first set everything up board,choose marker,who's first
+    
+    the_board = [' ']*10
+    
+    player1_marker,player2_marker = player_input()
+    
+    turn = choose_first()
+    
+    print(turn + ' will go first')
+    
+    play_game = input('ready to play?y or n')
+    
+    if play_game == 'y':
+        game_on = True
+    else:
+        game_on = False
+        
+    while game_on:
+        if turn == 'player1':
+            #show the board
+            display_board(the_board)
+            #chooose position
+            position = player_choice(the_board)
+            #place the marker on the position
+            place_marker(the_board,player1_marker,position)
+            #win check
+            
+            if win_check(the_board,player1_marker):
+                display_board(the_board)
+                print('Player1 has won')
+                game_on = False
+            else:
+                if full_board_check(the_board):
+                    display_board(the_board)
+                    print("Tie Game!")
+                    game_on = False
+                else:
+                    turn = 'player2'
+            
