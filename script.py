@@ -4,7 +4,7 @@ from IPython.display import clear_output
 
 def display_board(board):
     """This is a square board with 9 boxs"""
-    clear_output
+    clear_output()
     print(" {} | {} | {} ".format(*board[1:4]))
     print("---|---|---")
     print(" {} | {} | {} ".format(*board[4:7]))
